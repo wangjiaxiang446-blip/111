@@ -3,17 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#071b36">
+  <meta name="theme-color" content="#f6f5f1">
   <meta name="description" content="面向初中生的光的反射交互式二维数字化教学资源">
   <title>反射之光：帮小明照亮目标</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233fbdff'/%3E%3Cpath d='M18 44 31 13l3 18 14-10-18 30-2-19z' fill='%23fff5a8'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d1f24'/%3E%3Cpath d='M18 44 31 13l3 18 14-10-18 30-2-19z' fill='%23f0a01a'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="animation.css">
   <link rel="stylesheet" href="challenge.css">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
-  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
   <header class="topbar">
     <button class="brand" data-go="home" aria-label="返回首页">
       <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M7 28 19 9l3 12 12-9-13 21-3-12z"/></svg></span>
@@ -48,28 +47,24 @@
           </div>
         </div>
         <div class="hero-stage" aria-label="光线反射示意动画">
-          <div class="stage-badge">观察光的路径</div>
           <svg class="hero-svg" viewBox="0 0 640 500" role="img" aria-label="手电筒光线经过镜面反射照亮钥匙">
-            <defs>
-              <linearGradient id="beamGlow" x1="0" x2="1"><stop stop-color="#fff"/><stop offset=".45" stop-color="#ffe36e"/><stop offset="1" stop-color="#ffc72c"/></linearGradient>
-              <filter id="heroGlow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-              <radialGradient id="targetGlow"><stop stop-color="#ffe36e" stop-opacity=".8"/><stop offset="1" stop-color="#ffe36e" stop-opacity="0"/></radialGradient>
-            </defs>
-            <circle class="target-pulse" cx="510" cy="129" r="75" fill="url(#targetGlow)"/>
-            <path d="M82 359h195" stroke="#143c68" stroke-width="18" stroke-linecap="round"/><path d="M107 359v80M253 359v80" stroke="#143c68" stroke-width="15"/>
+            <defs><radialGradient id="targetGlow"><stop stop-color="#f0a01a" stop-opacity=".3"/><stop offset="1" stop-color="#f0a01a" stop-opacity="0"/></radialGradient></defs>
+            <g class="grid-lines"><path d="M0 100h640M0 200h640M0 300h640M0 400h640M107 0v500M213 0v500M320 0v500M427 0v500M533 0v500"/></g>
+            <circle class="target-pulse" cx="500" cy="129" r="72" fill="url(#targetGlow)"/>
+            <path d="M82 359h195" stroke="#d8d4ca" stroke-width="14" stroke-linecap="round"/><path d="M107 359v80M253 359v80" stroke="#d8d4ca" stroke-width="12" stroke-linecap="round"/>
             <g class="kid">
-              <circle cx="92" cy="152" r="34" fill="#ffd2ae"/><path d="M59 146q7-47 52-27l14 26q-15-15-25-6-20-9-41 7" fill="#17345c"/>
-              <path d="M63 197q28-23 57 0l13 92H51z" fill="#2387e8"/><path d="m64 219-38 45m93-43 38 25" stroke="#ffd2ae" stroke-width="15" stroke-linecap="round"/>
-              <circle cx="81" cy="153" r="3" fill="#17345c"/><circle cx="104" cy="153" r="3" fill="#17345c"/><path d="M85 169q9 7 17 0" fill="none" stroke="#ad5c4c" stroke-width="3"/>
+              <circle cx="92" cy="152" r="34" fill="#f2c9a5"/><path d="M59 146q7-47 52-27l14 26q-15-15-25-6-20-9-41 7" fill="#2b2f38"/>
+              <path d="M63 197q28-23 57 0l13 92H51z" fill="#6b7f99"/><path d="m64 219-38 45m93-43 38 25" stroke="#f2c9a5" stroke-width="14" stroke-linecap="round"/>
+              <circle cx="81" cy="153" r="3" fill="#2b2f38"/><circle cx="104" cy="153" r="3" fill="#2b2f38"/><path d="M85 169q9 7 17 0" fill="none" stroke="#b5644f" stroke-width="3" stroke-linecap="round"/>
             </g>
-            <g transform="translate(148 224) rotate(-8)"><rect width="78" height="35" rx="12" fill="#f5f9ff"/><rect x="58" y="5" width="35" height="25" rx="5" fill="#ffcc3d"/><circle cx="18" cy="17" r="7" fill="#8aa3c4"/></g>
-            <path class="hero-beam beam-one" d="M239 230 354 278" stroke="url(#beamGlow)" stroke-width="7" stroke-linecap="round" filter="url(#heroGlow)"/>
-            <g transform="translate(353 278) rotate(-31)"><rect x="-10" y="-87" width="20" height="174" rx="8" fill="#d7efff" stroke="#86caff" stroke-width="4"/><path d="M0-75V75" stroke="#fff" stroke-width="5"/></g>
-            <path class="hero-beam beam-two" d="M360 267 503 136" stroke="url(#beamGlow)" stroke-width="7" stroke-linecap="round" filter="url(#heroGlow)"/>
-            <g transform="translate(500 129) rotate(-18)"><circle r="19" fill="none" stroke="#ffc72c" stroke-width="7"/><path d="M-20 1h-22m22 0 9-12m-9 12 10 12m-24-12v18m7-18v18" stroke="#ffc72c" stroke-width="6" stroke-linecap="round"/></g>
-            <g class="sparkles" fill="#fff3a8"><circle cx="410" cy="213" r="4"/><circle cx="464" cy="163" r="3"/><path d="m535 91 5 10 10 5-10 5-5 10-5-10-10-5 10-5z"/></g>
+            <g transform="translate(148 224) rotate(-8)"><rect width="78" height="35" rx="10" fill="#dfe3e8"/><rect x="58" y="5" width="30" height="25" rx="5" fill="#f0a01a"/><circle cx="18" cy="17" r="6" fill="#9aa3ae"/></g>
+            <path class="hero-beam beam-one" pathLength="1" d="M239 230 350 276" stroke="#f0a01a" stroke-width="5" stroke-linecap="round"/>
+            <g transform="translate(353 278) rotate(-31)"><rect x="-8" y="-82" width="16" height="164" rx="8" fill="#d5dbe3"/><path d="M0-74V74" stroke="#5b6b80" stroke-width="5" stroke-linecap="round"/></g>
+            <path class="hero-beam beam-two" pathLength="1" d="M357 270 486 142" stroke="#2f6fe4" stroke-width="5" stroke-linecap="round"/>
+            <circle class="hero-hit" cx="354" cy="274" r="5" fill="#1d1f24"/>
+            <g transform="translate(500 129) rotate(-18)"><circle r="17" fill="none" stroke="#d98a0b" stroke-width="6"/><path d="M-18 1h-22m22 0 8-11m-8 11 9 11m-22-11v16m7-16v16" stroke="#d98a0b" stroke-width="5" stroke-linecap="round"/></g>
           </svg>
-          <div class="stage-note"><span class="dot"></span><strong>光路正在演示</strong><small>黄色：光线　蓝色：镜面</small></div>
+          <div class="stage-note"><span><i style="background:var(--amber)"></i>入射光线</span><span><i style="background:var(--accent)"></i>反射光线</span><span><i style="background:#5b6b80"></i>镜面</span></div>
         </div>
       </div>
     </section>
@@ -80,17 +75,16 @@
         <div class="story-card">
           <div class="story-visual">
             <svg viewBox="0 0 900 470" role="img" aria-label="小明用手电筒寻找桌下钥匙但光线被桌面遮挡">
-              <defs><filter id="softGlow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><linearGradient id="blockedBeam"><stop stop-color="#fff8b5"/><stop offset="1" stop-color="#ffcb31"/></linearGradient></defs>
-              <rect x="0" y="0" width="900" height="470" rx="24" fill="#081d3b"/>
-              <circle cx="760" cy="75" r="32" fill="#d9eeff" opacity=".9"/><circle cx="773" cy="67" r="32" fill="#081d3b"/>
-              <g id="introKid" class="intro-kid"><circle cx="148" cy="165" r="42" fill="#ffd1ad"/><path d="M107 158q8-57 66-33l18 33q-22-18-37-8-22-13-47 8" fill="#142f55"/><path d="M112 221q39-29 77 2l12 123H90z" fill="#2b8feb"/><circle cx="135" cy="165" r="4"/><circle cx="163" cy="165" r="4"/><path d="M140 183q12 7 22-2" fill="none" stroke="#9d5247" stroke-width="3"/></g>
-              <g transform="translate(190 245) rotate(-8)"><rect width="112" height="45" rx="14" fill="#e8f3ff"/><rect x="83" y="6" width="45" height="33" rx="7" fill="#ffd33d"/></g>
-              <path id="introBeam" class="intro-beam" d="M320 260 500 304" stroke="url(#blockedBeam)" stroke-width="10" stroke-linecap="round" filter="url(#softGlow)"/>
-              <path d="M475 225h320" stroke="#1c4a78" stroke-width="34" stroke-linecap="round"/><path d="M510 239v170m250-170v170" stroke="#1c4a78" stroke-width="22"/>
-              <g transform="translate(673 371) rotate(-20)"><circle r="22" fill="none" stroke="#ffcf3b" stroke-width="8"/><path d="M-22 0h-45m20 0v18m15-18v18" stroke="#ffcf3b" stroke-width="8" stroke-linecap="round"/></g>
-              <path class="blocked-mark" d="m492 282 24 24m0-24-24 24" stroke="#ff6e7b" stroke-width="7" stroke-linecap="round"/>
-              <g id="introMirror" class="intro-mirror" transform="translate(474 322) rotate(-30)"><rect x="-8" y="-73" width="16" height="146" rx="7" fill="#d9f4ff" stroke="#76c9ff" stroke-width="4"/></g>
-              <text x="557" y="438" fill="#8faed1" font-size="20">钥匙在桌面阴影里</text>
+              <rect width="900" height="470" fill="#f8f7f3"/>
+              <path d="M492 238h286v172H492z" fill="#eeebe4"/>
+              <g id="introKid" class="intro-kid"><circle cx="148" cy="165" r="42" fill="#f2c9a5"/><path d="M107 158q8-57 66-33l18 33q-22-18-37-8-22-13-47 8" fill="#2b2f38"/><path d="M112 221q39-29 77 2l12 123H90z" fill="#6b7f99"/><circle cx="135" cy="165" r="4" fill="#2b2f38"/><circle cx="163" cy="165" r="4" fill="#2b2f38"/><path d="M140 183q12 7 22-2" fill="none" stroke="#b5644f" stroke-width="3" stroke-linecap="round"/></g>
+              <g transform="translate(190 245) rotate(-8)"><rect width="112" height="45" rx="12" fill="#dfe3e8"/><rect x="83" y="6" width="40" height="33" rx="7" fill="#f0a01a"/></g>
+              <path id="introBeam" class="intro-beam" pathLength="1" d="M320 260 486 300" stroke="#f0a01a" stroke-width="6" stroke-linecap="round"/>
+              <path d="M475 225h320" stroke="#d8d4ca" stroke-width="26" stroke-linecap="round"/><path d="M510 239v170m250-170v170" stroke="#d8d4ca" stroke-width="18" stroke-linecap="round"/>
+              <g transform="translate(673 371) rotate(-20)" opacity=".75"><circle r="20" fill="none" stroke="#d98a0b" stroke-width="7"/><path d="M-20 0h-45m20 0v18m15-18v18" stroke="#d98a0b" stroke-width="7" stroke-linecap="round"/></g>
+              <path class="blocked-mark" d="m490 282 20 20m0-20-20 20" stroke="#d64545" stroke-width="5" stroke-linecap="round"/>
+              <g id="introMirror" class="intro-mirror" transform="translate(474 322) rotate(-30)"><rect x="-7" y="-72" width="14" height="144" rx="7" fill="#d5dbe3"/><path d="M0-64V64" stroke="#5b6b80" stroke-width="5" stroke-linecap="round"/></g>
+              <text x="560" y="440" fill="#858891" font-size="18">钥匙在桌面阴影里</text>
             </svg>
             <div class="story-status" id="storyStatus"><span>1</span><p><b>手电筒亮了</b>光沿直线传播，却被桌面挡住。</p></div>
           </div>
@@ -113,51 +107,51 @@
           <div class="lesson-player">
             <div class="scene-canvas" id="sceneCanvas" aria-live="polite">
               <svg id="lessonSvg" viewBox="0 0 800 430" role="img" aria-label="光的反射动态讲解图">
-                <defs><filter id="lg"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><marker id="arrowY" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 8 3 0 6z" fill="#ffd84a"/></marker><marker id="arrowC" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 8 3 0 6z" fill="#54d8ff"/></marker></defs>
-                <rect width="800" height="430" rx="22" fill="#061a36"/>
+                <defs><marker id="arrowY" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 8 3 0 6z" fill="#f0a01a"/></marker><marker id="arrowC" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 8 3 0 6z" fill="#2f6fe4"/></marker></defs>
+                <rect width="800" height="430" fill="#f8f7f3"/>
                 <g class="scene scene-1">
-                  <g class="s1-room"><path d="M65 300h330" stroke="#17436f" stroke-width="22"/><path d="M100 300v92m250-92v92" stroke="#17436f" stroke-width="18"/><rect x="385" y="286" width="35" height="30" rx="5" fill="#102e50"/></g>
-                  <g class="s1-key" transform="translate(610 346)"><circle r="42" fill="#020d1f" opacity=".78"/><circle r="20" fill="none" stroke="#ffcf3b" stroke-width="7"/><path d="M-20 0h-42m15 0v17m14-17v17" stroke="#ffcf3b" stroke-width="7"/></g>
-                  <g class="s1-kid"><circle cx="92" cy="125" r="34" fill="#ffd0aa"/><path d="M62 121q4-43 42-31l21 28q-17-12-31-5-13-7-32 8" fill="#17345a"/><path d="M58 179q32-27 68 0l15 90H45z" fill="#2a8dec"/><circle cx="81" cy="126" r="3" fill="#17345a"/><circle cx="105" cy="126" r="3" fill="#17345a"/></g>
-                  <g class="s1-flashlight" transform="translate(126 197)"><rect width="92" height="36" rx="12" fill="#ecf5ff"/><rect x="70" y="5" width="35" height="26" rx="5" fill="#ffd23c"/></g>
-                  <path class="s1-beam draw-ray" pathLength="1" d="M231 215 386 263" stroke="#ffd84a" stroke-width="9" filter="url(#lg)"/>
-                  <g class="s1-block"><circle cx="393" cy="265" r="24" fill="#ff6c7d" opacity=".14"/><path d="m382 254 22 22m0-22-22 22" stroke="#ff6c7d" stroke-width="7"/></g>
-                  <g class="s1-question"><text x="165" y="123" font-size="70" font-weight="800" fill="#ffcf3b">?</text><circle cx="179" cy="143" r="4" fill="#ffcf3b"/></g>
+                  <g class="s1-room"><path d="M65 300h330" stroke="#d8d4ca" stroke-width="18" stroke-linecap="round"/><path d="M100 300v92m250-92v92" stroke="#d8d4ca" stroke-width="14" stroke-linecap="round"/><rect x="385" y="286" width="35" height="30" rx="5" fill="#c9c5bb"/></g>
+                  <g class="s1-key" transform="translate(610 346)"><circle r="44" fill="#ebe8e0"/><circle r="18" fill="none" stroke="#d98a0b" stroke-width="6"/><path d="M-18 0h-40m15 0v16m14-16v16" stroke="#d98a0b" stroke-width="6" stroke-linecap="round"/></g>
+                  <g class="s1-kid"><circle cx="92" cy="125" r="34" fill="#f2c9a5"/><path d="M62 121q4-43 42-31l21 28q-17-12-31-5-13-7-32 8" fill="#2b2f38"/><path d="M58 179q32-27 68 0l15 90H45z" fill="#6b7f99"/><circle cx="81" cy="126" r="3" fill="#2b2f38"/><circle cx="105" cy="126" r="3" fill="#2b2f38"/></g>
+                  <g class="s1-flashlight" transform="translate(126 197)"><rect width="92" height="36" rx="10" fill="#dfe3e8"/><rect x="70" y="5" width="32" height="26" rx="5" fill="#f0a01a"/></g>
+                  <path class="s1-beam draw-ray" pathLength="1" d="M231 215 380 261" stroke="#f0a01a" stroke-width="6"/>
+                  <g class="s1-block"><circle cx="393" cy="265" r="22" fill="#d64545" opacity=".08"/><path d="m384 256 18 18m0-18-18 18" stroke="#d64545" stroke-width="5" stroke-linecap="round"/></g>
+                  <g class="s1-question"><text x="165" y="123" font-size="64" font-weight="700" fill="#a86400">?</text></g>
                   <g class="s1-copy"><text x="445" y="82" class="svg-title">光线被障碍挡住了</text><text x="445" y="122" class="svg-copy">钥匙仍藏在阴影里</text><text x="445" y="166" class="svg-label cyan">怎样让光绕过障碍呢？</text></g>
                 </g>
                 <g class="scene scene-2">
                   <text x="58" y="64" class="svg-title s2-title">镜面改变光的传播方向</text>
-                  <g class="s2-key" transform="translate(690 112)"><circle class="s2-target-glow" r="48" fill="#ffd84a"/><circle r="18" fill="none" stroke="#ffcf3b" stroke-width="7"/><path d="M-18 0h-38m13 0v16m12-16v16" stroke="#ffcf3b" stroke-width="7"/></g>
-                  <path class="s2-incident draw-ray" pathLength="1" d="M92 335 400 245" stroke="#ffd84a" stroke-width="8" marker-end="url(#arrowY)" filter="url(#lg)"/>
-                  <circle class="s2-impact" cx="400" cy="245" r="15" fill="#fff7bd"/>
-                  <g class="s2-reflection-group"><path class="s2-reflected draw-ray" pathLength="1" d="M405 242 670 120" stroke="#54d8ff" stroke-width="8" marker-end="url(#arrowC)" filter="url(#lg)"/></g>
-                  <g class="s2-mirror" transform="translate(400 245)"><g class="s2-mirror-tilt"><rect x="-10" y="-105" width="20" height="210" rx="7" fill="#d8f3ff" stroke="#65c7ff" stroke-width="4"/><path d="M-4-87V87" stroke="#fff" stroke-width="4" opacity=".7"/></g></g>
-                  <g class="s2-message"><rect x="82" y="106" width="318" height="54" rx="15" fill="#0f3158" stroke="#2e6b9c"/><text x="241" y="140" text-anchor="middle" class="svg-label cyan">入射 → 反射 → 照亮目标</text></g>
+                  <g class="s2-key" transform="translate(690 112)"><circle class="s2-target-glow" r="46" fill="#f0a01a"/><circle r="17" fill="none" stroke="#d98a0b" stroke-width="6"/><path d="M-17 0h-38m13 0v15m12-15v15" stroke="#d98a0b" stroke-width="6" stroke-linecap="round"/></g>
+                  <path class="s2-incident draw-ray" pathLength="1" d="M92 335 396 246" stroke="#f0a01a" stroke-width="5" marker-end="url(#arrowY)"/>
+                  <circle class="s2-impact" cx="400" cy="245" r="14" fill="none" stroke="#f0a01a" stroke-width="2"/>
+                  <g class="s2-reflection-group"><path class="s2-reflected draw-ray" pathLength="1" d="M405 242 668 121" stroke="#2f6fe4" stroke-width="5" marker-end="url(#arrowC)"/></g>
+                  <g class="s2-mirror" transform="translate(400 245)"><g class="s2-mirror-tilt"><rect x="-8" y="-100" width="16" height="200" rx="8" fill="#d5dbe3"/><path d="M-1-92V92" stroke="#5b6b80" stroke-width="5" stroke-linecap="round"/></g></g>
+                  <g class="s2-message"><rect x="82" y="106" width="318" height="54" rx="12" fill="#fff" stroke="#e3e1da"/><text x="241" y="140" text-anchor="middle" class="svg-label cyan">入射 → 反射 → 照亮目标</text></g>
                 </g>
                 <g class="scene scene-3">
                   <text x="54" y="55" class="svg-title s3-title">认识反射中的关键概念</text>
-                  <path class="s3-mirror" d="M235 255H565" stroke="#e7f5ff" stroke-width="14"/>
-                  <path class="s3-incident draw-ray" pathLength="1" d="M115 92 400 255" stroke="#ffd84a" stroke-width="7" marker-end="url(#arrowY)"/>
-                  <path class="s3-reflected draw-ray" pathLength="1" d="M405 252 690 89" stroke="#54d8ff" stroke-width="7" marker-end="url(#arrowC)"/>
-                  <path class="s3-normal draw-ray" pathLength="1" d="M400 84V374" stroke="#bdcde0" stroke-width="3" stroke-dasharray="10 10"/>
-                  <circle class="s3-point" cx="400" cy="255" r="10" fill="#fff"/>
+                  <path class="s3-mirror" d="M235 255H565" stroke="#5b6b80" stroke-width="7" stroke-linecap="round"/>
+                  <path class="s3-incident draw-ray" pathLength="1" d="M115 92 396 253" stroke="#f0a01a" stroke-width="5" marker-end="url(#arrowY)"/>
+                  <path class="s3-reflected draw-ray" pathLength="1" d="M404 253 690 89" stroke="#2f6fe4" stroke-width="5" marker-end="url(#arrowC)"/>
+                  <path class="s3-normal draw-ray" pathLength="1" d="M400 84V374" stroke="#9a9ea6" stroke-width="2"/>
+                  <circle class="s3-point" cx="400" cy="255" r="6" fill="#1d1f24"/>
                   <text x="145" y="150" class="svg-label yellow s3-label-in">入射光线</text><text x="535" y="150" class="svg-label cyan s3-label-out">反射光线</text><text x="412" y="100" class="svg-label s3-label-normal">法线</text>
-                  <path class="s3-arc-in draw-ray" pathLength="1" d="M400 183A72 72 0 0 0 337 219" fill="none" stroke="#ff9b59" stroke-width="5"/>
-                  <path class="s3-arc-out draw-ray" pathLength="1" d="M400 183A72 72 0 0 1 463 219" fill="none" stroke="#7ef0c5" stroke-width="5"/>
-                  <g class="s3-angle-in"><rect x="250" y="185" width="124" height="36" rx="11" fill="#5d301f"/><text x="312" y="209" text-anchor="middle" class="svg-label orange">入射角 ∠i</text></g>
-                  <g class="s3-angle-out"><rect x="426" y="185" width="124" height="36" rx="11" fill="#164c42"/><text x="488" y="209" text-anchor="middle" class="svg-label green">反射角 ∠r</text></g>
+                  <path class="s3-arc-in draw-ray" pathLength="1" d="M400 183A72 72 0 0 0 337 219" fill="none" stroke="#f0a01a" stroke-width="3"/>
+                  <path class="s3-arc-out draw-ray" pathLength="1" d="M400 183A72 72 0 0 1 463 219" fill="none" stroke="#2f6fe4" stroke-width="3"/>
+                  <g class="s3-angle-in"><rect x="250" y="185" width="124" height="36" rx="10" fill="#fdf2dd"/><text x="312" y="209" text-anchor="middle" class="svg-label orange">入射角 ∠i</text></g>
+                  <g class="s3-angle-out"><rect x="426" y="185" width="124" height="36" rx="10" fill="#e9f0fd"/><text x="488" y="209" text-anchor="middle" class="svg-label green">反射角 ∠r</text></g>
                   <g class="s3-values"><circle class="s3-value-ring left" cx="364" cy="156" r="32"/><circle class="s3-value-ring right" cx="436" cy="156" r="32"/><text x="364" y="164" text-anchor="middle" class="angle-value">42°</text><text x="436" y="164" text-anchor="middle" class="angle-value">42°</text></g>
                   <text x="400" y="402" text-anchor="middle" class="svg-copy s3-note">两个角都从法线量起，不是从镜面量起</text>
                 </g>
                 <g class="scene scene-4">
                   <text x="54" y="54" class="svg-title s4-title">光的反射定律</text>
-                  <path d="M242 263H558" stroke="#e7f5ff" stroke-width="13"/>
-                  <path d="M120 98 400 263" stroke="#ffd84a" stroke-width="7" marker-end="url(#arrowY)"/><path d="M405 260 685 95" stroke="#54d8ff" stroke-width="7" marker-end="url(#arrowC)"/><path d="M400 82V382" stroke="#bdcde0" stroke-width="3" stroke-dasharray="10 10"/><circle cx="400" cy="263" r="10" fill="#fff"/>
-                  <path class="s4-arc s4-arc-in" d="M400 191A72 72 0 0 0 337 227" fill="none" stroke="#ff9b59" stroke-width="5"/><path class="s4-arc s4-arc-out" d="M400 191A72 72 0 0 1 463 227" fill="none" stroke="#7ef0c5" stroke-width="5"/>
+                  <path d="M242 263H558" stroke="#5b6b80" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M120 98 396 261" stroke="#f0a01a" stroke-width="5" stroke-linecap="round" marker-end="url(#arrowY)"/><path d="M404 261 685 95" stroke="#2f6fe4" stroke-width="5" stroke-linecap="round" marker-end="url(#arrowC)"/><path d="M400 82V382" stroke="#9a9ea6" stroke-width="2" stroke-dasharray="7 7"/><circle cx="400" cy="263" r="6" fill="#1d1f24"/>
+                  <path class="s4-arc s4-arc-in" d="M400 191A72 72 0 0 0 337 227" fill="none" stroke="#f0a01a" stroke-width="3"/><path class="s4-arc s4-arc-out" d="M400 191A72 72 0 0 1 463 227" fill="none" stroke="#2f6fe4" stroke-width="3"/>
                   <g class="s4-law s4-law-1"><rect x="62" y="300" width="230" height="38" rx="12"/><text x="76" y="326">① 三线在同一平面内</text></g>
                   <g class="s4-law s4-law-2"><rect x="62" y="347" width="272" height="38" rx="12"/><text x="76" y="373">② 两线分居法线两侧</text></g>
                   <g class="s4-law s4-law-3"><rect x="500" y="300" width="235" height="38" rx="12"/><text x="514" y="326">③ 反射角等于入射角</text></g>
-                  <g class="s4-formula"><rect x="508" y="344" width="210" height="62" rx="17" fill="#0f3158" stroke="#54d8ff" stroke-width="2"/><text x="613" y="382" text-anchor="middle" class="law-eq">∠r = ∠i</text></g>
+                  <g class="s4-formula"><rect x="508" y="344" width="210" height="62" rx="12" fill="#fff" stroke="#1d1f24" stroke-width="1.5"/><text x="613" y="382" text-anchor="middle" class="law-eq">∠r = ∠i</text></g>
                   <text x="400" y="418" text-anchor="middle" class="svg-label cyan s4-cta">现在，亲自调整镜子试一试吧！</text>
                 </g>
               </svg>
@@ -189,19 +183,19 @@
           <div class="lab-board">
             <div class="lab-hint"><span>操作</span>拖动 <b>蓝色控制点</b> 转动镜面</div>
             <svg id="labSvg" viewBox="0 0 920 520" role="img" aria-label="可拖动镜面的光反射实验">
-              <defs><filter id="beamG"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><radialGradient id="hitGlow"><stop stop-color="#ffe56e" stop-opacity=".9"/><stop offset="1" stop-color="#ffe56e" stop-opacity="0"/></radialGradient><marker id="labArrowY" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 8 3 0 6z" fill="#ffd84a"/></marker><marker id="labArrowC" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 8 3 0 6z" fill="#55d9ff"/></marker></defs>
-              <rect width="920" height="520" rx="24" fill="#061a36"/>
-              <g class="grid-lines" opacity=".22"><path d="M0 65h920M0 130h920M0 195h920M0 260h920M0 325h920M0 390h920M0 455h920M115 0v520M230 0v520M345 0v520M460 0v520M575 0v520M690 0v520M805 0v520"/></g>
+              <defs><radialGradient id="hitGlow"><stop stop-color="#f0a01a" stop-opacity=".35"/><stop offset="1" stop-color="#f0a01a" stop-opacity="0"/></radialGradient><marker id="labArrowY" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 8 3 0 6z" fill="#f0a01a"/></marker><marker id="labArrowC" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 8 3 0 6z" fill="#2f6fe4"/></marker></defs>
+              <rect width="920" height="520" fill="#f8f7f3"/>
+              <g class="grid-lines"><path d="M0 65h920M0 130h920M0 195h920M0 260h920M0 325h920M0 390h920M0 455h920M115 0v520M230 0v520M345 0v520M460 0v520M575 0v520M690 0v520M805 0v520"/></g>
               <circle id="targetAura" cx="820" cy="130" r="72" fill="url(#hitGlow)" opacity="0"/>
-              <g class="light-source" transform="translate(86 83)"><circle cx="29" cy="37" r="25" fill="#ffd84a" opacity=".17"/><path d="M0 20h58v34H0z" rx="8" fill="#e9f4ff"/><path d="M45 16h32v42H45z" fill="#ffd342"/><circle cx="15" cy="37" r="7" fill="#8ba7c7"/><text x="0" y="83">光源</text></g>
-              <g id="labTarget" class="target" transform="translate(820 130)"><circle r="38" fill="#173b62" stroke="#ffcf3d" stroke-width="4" stroke-dasharray="8 6"/><circle r="13" fill="#ffcf3d"/><path d="M-26 0h52M0-26v52" stroke="#ffcf3d" stroke-width="3" opacity=".7"/><text x="0" y="66" text-anchor="middle">目标区域</text></g>
+              <g class="light-source" transform="translate(86 83)"><rect x="0" y="20" width="58" height="34" rx="8" fill="#dfe3e8"/><rect x="45" y="16" width="30" height="42" rx="6" fill="#f0a01a"/><circle cx="15" cy="37" r="6" fill="#9aa3ae"/><text x="0" y="83">光源</text></g>
+              <g id="labTarget" class="target" transform="translate(820 130)"><circle r="38" fill="#fff" stroke="#f0a01a" stroke-width="2.5" stroke-dasharray="6 5"/><circle r="9" fill="#f0a01a"/><path d="M-26 0h52M0-26v52" stroke="#f0a01a" stroke-width="1.5" opacity=".6"/><text x="0" y="66" text-anchor="middle">目标区域</text></g>
               <line id="incidentRay" class="incident-ray" x1="115" y1="120" x2="480" y2="250" marker-end="url(#labArrowY)"/>
               <line id="reflectedRay" class="reflected-ray" x1="480" y1="250" x2="900" y2="250" marker-end="url(#labArrowC)"/>
               <line id="normalLine" class="normal-line" x1="480" y1="115" x2="480" y2="385"/>
               <path id="incArc" class="angle-arc inc-arc" d=""/><path id="refArc" class="angle-arc ref-arc" d=""/>
               <text id="incAngleLabel" class="angle-label inc" x="430" y="190">i</text><text id="refAngleLabel" class="angle-label ref" x="530" y="190">r</text>
               <g id="mirrorGroup" class="mirror-group" transform="translate(480 250) rotate(28)"><line x1="-92" y1="0" x2="92" y2="0" class="mirror-shadow"/><line x1="-86" y1="0" x2="86" y2="0" class="mirror-line"/><circle id="mirrorHandle" cx="86" cy="0" r="16" class="mirror-handle" tabindex="0" role="slider" aria-label="镜面角度" aria-valuemin="-75" aria-valuemax="75" aria-valuenow="28"/></g>
-              <circle cx="480" cy="250" r="8" fill="#fff"/><text x="466" y="284" class="point-label">入射点 O</text>
+              <circle cx="480" cy="250" r="5" fill="#1d1f24"/><text x="466" y="284" class="point-label">入射点 O</text>
             </svg>
             <div class="lab-feedback" id="labFeedback" aria-live="polite"><span class="feedback-icon">↻</span><p><b>继续调整镜面角度</b><small>让蓝色反射光线穿过黄色目标区</small></p></div>
           </div>
@@ -232,16 +226,16 @@
           <div class="game-topbar"><button class="text-btn" id="backToLevelHub">← 关卡选择</button><div><span id="gameLevelKicker">第一关</span><h3 id="gameLevelTitle">基础反射</h3></div><div class="game-stats"><span>操作 <b id="gameMoves">0</b></span><span>当前评价 <b id="gameStars">★★★</b></span></div></div>
           <div class="game-layout">
             <div class="game-board">
-              <svg id="pathSvg" viewBox="0 0 900 500" role="img" aria-label="可调整镜面的光路挑战画布"><defs><filter id="pathGlow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><radialGradient id="pathTargetGlow"><stop stop-color="#ffe36e" stop-opacity=".9"/><stop offset="1" stop-color="#ffe36e" stop-opacity="0"/></radialGradient></defs><rect width="900" height="500" rx="24" fill="#061a36"/><g class="path-grid" opacity=".2"><path d="M0 62.5h900M0 125h900M0 187.5h900M0 250h900M0 312.5h900M0 375h900M0 437.5h900M112.5 0v500M225 0v500M337.5 0v500M450 0v500M562.5 0v500M675 0v500M787.5 0v500"/></g><g id="pathObstacles"></g><g id="pathReference"></g><g id="pathRays"></g><g id="pathNormals"></g><g id="pathMirrors"></g><g id="pathEndpoints"></g></svg>
+              <svg id="pathSvg" viewBox="0 0 900 500" role="img" aria-label="可调整镜面的光路挑战画布"><defs><radialGradient id="pathTargetGlow"><stop stop-color="#f0a01a" stop-opacity=".35"/><stop offset="1" stop-color="#f0a01a" stop-opacity="0"/></radialGradient></defs><rect width="900" height="500" fill="#f8f7f3"/><g class="path-grid"><path d="M0 62.5h900M0 125h900M0 187.5h900M0 250h900M0 312.5h900M0 375h900M0 437.5h900M112.5 0v500M225 0v500M337.5 0v500M450 0v500M562.5 0v500M675 0v500M787.5 0v500"/></g><g id="pathObstacles"></g><g id="pathReference"></g><g id="pathRays"></g><g id="pathNormals"></g><g id="pathMirrors"></g><g id="pathEndpoints"></g></svg>
               <div class="path-legend"><span><i class="legend-line incident"></i>入射光线</span><span><i class="legend-line reflected"></i>反射光线</span><span><i class="legend-line reference"></i>参考光路</span></div><div class="path-feedback" id="pathFeedback" aria-live="polite">调整镜面，让反射光线照到目标。</div>
             </div>
             <aside class="game-panel"><div class="level-meta"><span id="gameDifficulty">难度：简单</span><span id="gameMirrorCount">镜子：1面</span></div><p class="level-objective" id="gameObjective"></p><div id="mirrorControls" class="mirror-controls"></div><div class="game-actions"><button class="btn secondary full" id="hintButton">💡 提示</button><button class="btn ghost full hidden" id="demoSolution">▶ 演示正确解法</button><button class="btn ghost full" id="restartLevel">↻ 重新开始本关</button></div><div class="hint-card hidden" id="hintCard" aria-live="polite"></div><div class="solution-note hidden" id="solutionNote">观察镜面方向和反射光线的变化。现在你可以自己再试一次。<button class="btn secondary small" id="tryAgain">自己再试一次</button></div></aside>
           </div>
           <div class="level-success hidden" id="levelSuccess"><div class="success-icon">✓</div><div><h3 id="successTitle">挑战成功！</h3><p id="successText"></p><div class="earned-stars" id="earnedStars">★★★</div></div><div class="success-actions"><button class="btn secondary" id="replayLevel">重新挑战</button><button class="btn primary" id="nextLevel">下一关 →</button></div></div>
         </div>
-        <div id="pathComplete" class="path-complete hidden"><div class="trophy">🏆</div><span class="step-kicker">光路挑战完成</span><h3>恭喜你完成全部光路挑战！</h3><div id="completeLevelList" class="complete-level-list"></div><p>总获得星数：<b id="completeStars">0</b> / 15</p><div class="complete-checks">✓ 基础反射　✓ 绕过障碍　✓ 精准控制　✓ 二次反射　✓ 综合光路应用</div><div class="inline-actions"><button class="btn secondary" id="rechallengeAll">重新挑战</button><button class="btn primary" data-go="quiz">进入知识检测 →</button></div></div>
+        <div id="pathComplete" class="path-complete hidden"><div class="success-icon" style="margin:0 auto 12px">✓</div><span class="step-kicker">光路挑战完成</span><h3>恭喜你完成全部光路挑战！</h3><div id="completeLevelList" class="complete-level-list"></div><p>总获得星数：<b id="completeStars">0</b> / 15</p><div class="complete-checks">✓ 基础反射　✓ 绕过障碍　✓ 精准控制　✓ 二次反射　✓ 综合光路应用</div><div class="inline-actions"><button class="btn secondary" id="rechallengeAll">重新挑战</button><button class="btn primary" data-go="quiz">进入知识检测 →</button></div></div>
         <details class="legacy-challenge"><summary>基础任务回顾（原有任务）</summary><div class="legacy-inner"><div class="challenge-progress"><div><span id="challengeBar"></span></div><p><b id="challengeCount">0</b> / 2 项任务完成</p></div><div class="challenge-grid">
-          <article class="task-card" id="taskOneCard"><header><span class="task-num">任务 01</span><i class="task-state">待完成</i></header><h3>调整镜子，使反射光线照到目标区域</h3><p>拖动滑杆改变镜面方向，观察蓝色反射光线。</p><svg id="challengeSvg" viewBox="0 0 520 270" role="img" aria-label="调整镜面照亮目标的挑战"><rect width="520" height="270" rx="18" fill="#071d3c"/><circle cx="60" cy="72" r="16" fill="#ffd84a"/><line id="cIncident" x1="60" y1="72" x2="260" y2="145" stroke="#ffd84a" stroke-width="6"/><line id="cReflected" x1="260" y1="145" x2="500" y2="145" stroke="#53d9ff" stroke-width="6"/><g id="cMirror" transform="translate(260 145) rotate(28)"><line x1="-65" x2="65" stroke="#dff6ff" stroke-width="12" stroke-linecap="round"/><line x1="-62" x2="62" stroke="#68caff" stroke-width="4"/></g><circle id="cTarget" cx="455" cy="78" r="27" fill="#173b62" stroke="#ffcf3d" stroke-width="4" stroke-dasharray="7 5"/><circle cx="455" cy="78" r="8" fill="#ffcf3d"/></svg><label class="range-label" for="challengeRange"><span>镜面角度</span><output id="challengeAngle">28°</output></label><input type="range" id="challengeRange" min="-60" max="60" value="28"><div class="task-feedback" id="taskOneFeedback">继续调整，试着让光线靠近目标。</div><button class="btn ghost small" id="retryTaskOne">重新挑战</button></article>
+          <article class="task-card" id="taskOneCard"><header><span class="task-num">任务 01</span><i class="task-state">待完成</i></header><h3>调整镜子，使反射光线照到目标区域</h3><p>拖动滑杆改变镜面方向，观察蓝色反射光线。</p><svg id="challengeSvg" viewBox="0 0 520 270" role="img" aria-label="调整镜面照亮目标的挑战"><rect width="520" height="270" fill="#fff"/><circle cx="60" cy="72" r="12" fill="#f0a01a"/><line id="cIncident" x1="60" y1="72" x2="260" y2="145" stroke="#f0a01a" stroke-width="4" stroke-linecap="round"/><line id="cReflected" x1="260" y1="145" x2="500" y2="145" stroke="#2f6fe4" stroke-width="4" stroke-linecap="round"/><g id="cMirror" transform="translate(260 145) rotate(28)"><line x1="-65" x2="65" stroke="#d5dbe3" stroke-width="14" stroke-linecap="round"/><line x1="-60" x2="60" stroke="#5b6b80" stroke-width="4" stroke-linecap="round"/></g><circle id="cTarget" cx="455" cy="78" r="27" fill="#fff" stroke="#f0a01a" stroke-width="2.5" stroke-dasharray="6 5"/><circle cx="455" cy="78" r="7" fill="#f0a01a"/></svg><label class="range-label" for="challengeRange"><span>镜面角度</span><output id="challengeAngle">28°</output></label><input type="range" id="challengeRange" min="-60" max="60" value="28"><div class="task-feedback" id="taskOneFeedback">继续调整，试着让光线靠近目标。</div><button class="btn ghost small" id="retryTaskOne">重新挑战</button></article>
           <article class="task-card" id="taskTwoCard"><header><span class="task-num">任务 02</span><i class="task-state">待作答</i></header><h3>当入射角为 30° 时，反射角是多少？</h3><p>选择一个答案，提交后会立即看到解析。</p><div class="option-list" id="challengeOptions"><button data-value="15"><b>A</b>15°</button><button data-value="30"><b>B</b>30°</button><button data-value="60"><b>C</b>60°</button><button data-value="90"><b>D</b>90°</button></div><div class="answer-feedback hidden" id="challengeFeedback" aria-live="polite"></div><div class="inline-actions"><button class="btn ghost small" id="retryTaskTwo">再试一次</button><button class="btn secondary small" id="nextQuestion">下一题 →</button></div></article>
         </div></div></details>
         <div class="page-foot"><button class="text-btn" data-go="lab">← 上一步</button><button class="btn primary" data-go="quiz">进入练习检测 →</button></div>
